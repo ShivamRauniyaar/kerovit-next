@@ -90,61 +90,67 @@ export default function HomeImageslider() {
   // console.log(json?.data?.[0]?.content?.homeslidebanner, "plpl");
 
   return (
-    <div className={style.heroslider}>
-      {/* Main Swiper */}
-      <Swiper
-        modules={[Autoplay, Thumbs, EffectFade]}
-        effect="fade"
-        loop
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
-        thumbs={{ swiper: thumbsSwiper }}
-        onSwiper={setMainSwiper}
-        className={style.mainswiper}
-      >
-        {slides.map((slide) => (
-          <SwiperSlide key={slide.id}>
-            <div
-              className={style.heroslide}
-              style={{ backgroundImage: `url(${slide.img})` }}
-            ></div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      {/* Thumbnail Swiper */}
-      <div className={style.thumbscontainer} id="homecontainslide">
+    <div>
+      <div className={`${style.heroslider} hidden md:block`}>
+        {/* Main Swiper */}
         <Swiper
-          onSwiper={setThumbsSwiper}
-          slidesPerView={4}
-          spaceBetween={20}
-          watchSlidesProgress
-          className={style.thumbswiper}
+          modules={[Autoplay, Thumbs, EffectFade]}
+          effect="fade"
+          loop
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          thumbs={{ swiper: thumbsSwiper }}
+          onSwiper={setMainSwiper}
+          className={style.mainswiper}
         >
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
-              <div className={style.thumbwrapper}>
-                <div className={style.thumbimage} id="homeslide">
-                  <img src={slide.img} alt={slide.title} />
-                  <svg
-                    className={style.progresssvg}
-                    viewBox="0 0 120 120"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      className={style.progressrect}
-                      x="6"
-                      y="6"
-                      width="110"
-                      height="110"
-                      rx="0"
-                      ry="0"
-                    />
-                  </svg>
-                </div>
-              </div>
+              <div
+                className={style.heroslide}
+                style={{ backgroundImage: `url(${slide.img})` }}
+              ></div>
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Thumbnail Swiper */}
+        <div className={style.thumbscontainer} id="homecontainslide">
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            slidesPerView={4}
+            spaceBetween={20}
+            watchSlidesProgress
+            className={style.thumbswiper}
+          >
+            {slides.map((slide) => (
+              <SwiperSlide key={slide.id}>
+                <div className={style.thumbwrapper}>
+                  <div className={style.thumbimage} id="homeslide">
+                    <img src={slide.img} alt={slide.title} />
+                    <svg
+                      className={style.progresssvg}
+                      viewBox="0 0 120 120"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        className={style.progressrect}
+                        x="6"
+                        y="6"
+                        width="110"
+                        height="110"
+                        rx="0"
+                        ry="0"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+
+      <div className="block md:hidden">
+        <div>sample</div>
       </div>
     </div>
   );
