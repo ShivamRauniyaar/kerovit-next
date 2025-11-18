@@ -78,7 +78,7 @@ const SecondSectionSlider = () => {
   return (
     <section className={`${style.sectionpadd}  pl-[64px]`}>
       <div className={`${style.swiperpadding}`}>
-        <div className="section_3_header">
+        <div className="section_3_header mb-[64px]">
           Discover lorem ipsum when you <br />
           visit our Bhiwadi Center
         </div>
@@ -88,7 +88,7 @@ const SecondSectionSlider = () => {
           modules={[Navigation]}
           spaceBetween={40}
           slidesPerView={5}
-          loop={true}
+          loop={false}
           breakpoints={{
             0: { slidesPerView: 2, spaceBetween: 16 },
             640: { slidesPerView: 2 },
@@ -98,7 +98,7 @@ const SecondSectionSlider = () => {
         >
           {slidesData.map((slide, index) => (
             <SwiperSlide key={index}>
-              <Link href={slide.link} className="group">
+              <div className="group">
                 <div className="relative w-full flex items-center justify-center bg-[#E1E6E5] overflow-hidden">
                   <div className={` ${style.shine} aspect-[3/4]  `}>
                     <img
@@ -110,10 +110,10 @@ const SecondSectionSlider = () => {
                 </div>
 
                 <div className="pt-3 sm:pt-4 flex items-center justify-between">
-                  <p className="small">{slide.title}</p>
+                  <p className="small text-[14px]">{slide.title}</p>
                 
                 </div>
-              </Link>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

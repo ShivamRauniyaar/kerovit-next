@@ -115,7 +115,7 @@ export default function HomeImageslider() {
       <div className={style.thumbscontainer} id="homecontainslide">
         <Swiper
           onSwiper={setThumbsSwiper}
-          slidesPerView={3}
+          slidesPerView={4}
           spaceBetween={20}
           watchSlidesProgress
           className={style.thumbswiper}

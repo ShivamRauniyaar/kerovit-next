@@ -44,8 +44,10 @@ export default function Home() {
         <div className="md:w-1/2 space-y-8">
           <div className="flex md:justify-end">
             <div>
-              <h3 className="section_3_subheading mb-[32px]">Details</h3>
-              <div className="text-gray-700">
+              <h3 className="section_3_subheading mb-[32px] text-[24px]">
+                Details
+              </h3>
+              <div className="text-[#979795]">
                 <div>
                   <h4 className="label_heading">Contact</h4>
                   <p className="label_discription mt-[8px]">+91 999 9999 991</p>
@@ -55,7 +57,7 @@ export default function Home() {
                   <p className="label_discription mt-[8px]">
                     Kerovit Experience Center Bhiwadi
                   </p>
-                  <p className="mt-[32px]">
+                  <p className="mt-[16px] text-[14px]">
                     119 Third Floor, Farah Icon, Laal Bagh Main Rd,
                     <br />
                     opp. New Passport Kendra, Bhiwadi,
@@ -92,12 +94,12 @@ export default function Home() {
         </div>
       </section>
       <SecondSectionSlider />
-      <section className="mx-auto py-16 px-6 md:px-12 flex flex-col md:flex-row items-start gap-12">
+      <section className="mx-auto pt-[124px] pb-[192px] px-6 md:px-12 flex flex-col md:flex-row items-start gap-12">
         <div className="w-full md:w-1/2 space-y-8">
           <div className="md:w-[70%]">
-            <h2 className="section_4_heading">Book a Tour</h2>
+            <h2 className="section_4_heading mb-[32px]">Book a Tour</h2>
 
-            <form className="space-y-6">
+            <form className="">
               <div className="relative z-0 w-full mb-5 group">
                 <input
                   type="text"
@@ -153,16 +155,6 @@ export default function Home() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-gray-600 mb-1">State</label>
-                  <select className="w-full border-b text-gray-500 border-gray-300 focus:border-gray-800 outline-none py-2 bg-transparent">
-                    <option value="">Select State</option>
-                    <option>Rajasthan</option>
-                    <option>Maharashtra</option>
-                    <option>Delhi</option>
-                  </select>
-                </div>
-
-                <div>
                   <label className="block text-gray-600 mb-1">City</label>
                   <select className="w-full border-b text-gray-500 border-gray-300 focus:border-gray-800 outline-none py-2 bg-transparent">
                     <option value="">Select City</option>
@@ -173,48 +165,34 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative z-0 w-full mb-5 group">
-                <input
-                  type="text"
-                  name="floating_message"
-                  id="floating_message"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
-                  placeholder=" "
-                  required
-                />
-                <label
-                  htmlFor="floating_message"
-                  className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-gray-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >
-                  Message
-                </label>
-              </div>
-
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <p className="text-sm text-gray-500 leading-relaxed mt-[32px]">
                 By submitting this form you are allowing our lorem ipsum team to
                 contact you. Lorem ipsum disclaimer lorem ipsum.
               </p>
 
-              <button
-                type="submit"
-                className="bg-[#002A5C] text-white px-6 py-3 rounded-md hover:bg-[#003875] transition"
-              >
-                Send Enquiry
+              <button type="submit" className="button1 mt-[16px]">
+                Book
               </button>
             </form>
           </div>
         </div>
 
-        <div className="w-full md:w-1/2">
-          <img
-            src="./assets/craft1.png"
-            alt="Experience Center"
-            className="w-full h-auto rounded-md shadow-sm"
-          />
-        </div>
+        <div
+          className="w-full md:w-1/2 aspect-[16/9]"
+          style={{
+            backgroundImage: `url(./assets/booktour.png)`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            // width: "100%",
+            height: "100%",
+            aspectRatio: "16 / 9", // always rectangular ratio
+            backgroundColor: "#D9D9D9",
+          }}
+        ></div>
       </section>
 
-      <footer className="border-t border-[#E1E6E5] py-16 px-6 md:px-12">
+      <footer className="border-t border-[#E1E6E5] py-[80px] px-[64px] md:px-12">
         <div className="mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
@@ -227,9 +205,9 @@ export default function Home() {
             </div>
           </div>
 
-          <hr className="my-6 border-[#3a7caa]" />
+          <hr className="my-[40px] border-[#3a7caa]" />
 
-          <div className="flex flex-col md:flex-row justify-between md:items-center">
+          <div className="flex flex-col md:flex-row justify-between">
             <div className="visible md:hidden copyright_text">Copyright</div>
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="footer_label_second text-left md:text-center">
@@ -239,43 +217,46 @@ export default function Home() {
                 <a href="#" className="text-gray-600 hover:text-gray-800">
                   <img src="./assets/social-media/Frame 169.png" />
                 </a>
-                <a href="#" className="text-pink-600 hover:text-pink-800">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" className="text-black hover:text-gray-700">
+
+                <a href="#" className="text-black hover:text-[#979795]">
                   <img src="./assets/social-media/Frame 170.png" />
                 </a>
                 <a href="#" className="text-red-600 hover:text-red-800">
                   <img src="./assets/social-media/Frame 171.png" />
                 </a>
-                <a href="#" className="text-gray-700 hover:text-gray-900">
+                <a href="#" className="text-[#979795] hover:text-gray-900">
                   <img src="./assets/social-media/Frame 172.png" />
                 </a>
-                <a href="#" className="text-gray-700 hover:text-gray-900">
+                <a href="#" className="text-[#979795] hover:text-gray-900">
                   <img src="./assets/social-media/Frame 173.png" />
                 </a>
               </div>
             </div>
 
-            <div className="text-gray-600 mb-4 md:mb-0 hidden invisible md:visible">
+            <div className=" mb-4 md:mb-0 hidden invisible md:visible md:block text-[14px] text-[#979795]">
               <span className="">Copyright</span> © 2025 KEROVIT
             </div>
 
-            <div className="flex gap-3">
-              <a href="#">
-                <img
-                  src="./assets/social-media/Googleplay-icon.png"
-                  alt="Google Play"
-                  className="h-10"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/social-media/apple-ios-icon.png"
-                  alt="App Store"
-                  className="h-10"
-                />
-              </a>
+            <div>
+              <p className="footer_label_second text-left md:text-center">
+                Download our Customer Care App for more
+              </p>
+              <div className="flex gap-3 pt-[16px]">
+                <a href="#">
+                  <img
+                    src="./assets/social-media/Googleplay-icon.png"
+                    alt="Google Play"
+                    className="h-10"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="./assets/social-media/apple-ios-icon.png"
+                    alt="App Store"
+                    className="h-10"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
