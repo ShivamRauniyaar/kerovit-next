@@ -14,25 +14,25 @@ export default function HomeImageslider() {
   const slides = [
     {
       id: 1,
-      img: "/assets/banner_media/banner1.png",
+      img: "/assets/landing-page/bangalore.png",
       title: "NEW ARRIVAL",
       desc: "Timeless in design and function, our new basins enrich bathrooms with elegance and distinction.",
     },
     {
       id: 2,
-      img: "/assets/banner_media/banner2.png",
+      img: "/assets/landing-page/bhopal.png",
       title: "ELEGANT DESIGN",
       desc: "Crafted with precision and grace for modern spaces.",
     },
     {
       id: 3,
-      img: "/assets/banner_media/banner3.png",
+      img: "/assets/landing-page/chennai.png",
       title: "PREMIUM COLLECTION",
       desc: "Luxury meets minimalism in our latest bathroom collection.",
     },
     {
       id: 4,
-      img: "/assets/banner_media/banner4.png",
+      img: "/assets/landing-page/mumbai.png",
       title: "PREMIUM COLLECTION",
       desc: "Luxury meets minimalism in our latest bathroom collection.",
     },
