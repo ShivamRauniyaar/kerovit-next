@@ -42,37 +42,6 @@ export default function HomeImageslider() {
     },
   ];
 
-  const slides2 = [
-    {
-      id: 1,
-      image: "/assets/landing-page/bangalore.png",
-      number: "01",
-      title: "Modern Workspace",
-      location: "Business District",
-    },
-    {
-      id: 2,
-      image: "/assets/landing-page/bhopal.png",
-      number: "02",
-      title: "Kerovit Experience Center",
-      location: "Chennai",
-    },
-    {
-      id: 3,
-      image: "/assets/landing-page/chennai.png",
-      number: "03",
-      title: "Luxury Showroom",
-      location: "Premium Collection",
-    },
-    {
-      id: 4,
-      image: "/assets/landing-page/mumbai.png",
-      number: "04",
-      title: "Design Studio",
-      location: "Creative Space",
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(1);
   const [direction, setDirection] = useState("next");
 
@@ -135,21 +104,10 @@ export default function HomeImageslider() {
     };
   }, [thumbsSwiper, mainSwiper]);
 
-  // const res = await fetch("https://apicms.ecollat.com/api/homepage",
-  // {
-  //   headers: {
-  //     Origin: "https://kerovit.netlify.app",
-  //     'Cache-Control': 'public, max-age=604800, immutable',
-  //   }
-  // });
-  // const json = await res.json();
-
-  // console.log(json?.data?.[0]?.content?.homeslidebanner, "plpl");
 
   return (
     <div>
       <div className={`${style.heroslider} hidden md:block`}>
-        {/* Main Swiper */}
         <Swiper
           modules={[Autoplay, Thumbs, EffectFade]}
           effect="fade"
@@ -159,7 +117,6 @@ export default function HomeImageslider() {
           onSwiper={setMainSwiper}
           className={style.mainswiper}
           onSlideChange={(value) => setCurrentIndex(value?.activeIndex)}
-          // onSwiper={(swiper) => console.log(swiper)}
         >
           {slides.map((slide) => (
             <div className="relative">
@@ -173,7 +130,6 @@ export default function HomeImageslider() {
           ))}
         </Swiper>
 
-        {/* Thumbnail Swiper */}
         <div className={style.thumbscontainer} id="homecontainslide">
           <div>
             {" "}
@@ -188,7 +144,6 @@ export default function HomeImageslider() {
             spaceBetween={16}
             watchSlidesProgress
             className={style.thumbswiper}
-            
           >
             {slides.map((slide) => (
               <SwiperSlide key={slide.id}>
@@ -220,7 +175,6 @@ export default function HomeImageslider() {
 
       <div className="block md:hidden">
         <div className="relative w-full h-screen  overflow-hidden select-none">
-          {/* Main Slide Container */}
           <div className="relative w-full h-full flex items-center justify-center">
             {slides.map((slide, index) => {
               const isActive = index === currentIndex;
@@ -236,7 +190,6 @@ export default function HomeImageslider() {
                     zIndex: isActive ? 10 : 1,
                   }}
                 >
-                  {/* Image with zoom effect */}
                   <div className="w-full h-full overflow-hidden">
                     <img
                       src={slide.img}
@@ -251,10 +204,8 @@ export default function HomeImageslider() {
             })}
           </div>
 
-          {/* Navigation arrows - positioned at bottom */}
           <div className="absolute bottom-8 left-0 w-full px-[16px] z-30">
             <div className="flex justify-between items-center w-full">
-              {/* LEFT SIDE */}
               <div className="flex-1">
                 <div className="transition-all duration-700">
                   <div className="responsive_mobile_slider_text">
@@ -269,7 +220,6 @@ export default function HomeImageslider() {
                 </div>
               </div>
 
-              {/* RIGHT SIDE */}
               <div className="flex items-center gap-3">
                 <button
                   onClick={prevSlide}
@@ -314,7 +264,6 @@ export default function HomeImageslider() {
             </div>
           </div>
 
-          {/* Slide indicators/dots */}
           <div className="absolute bottom-8 left-[16px] z-30 flex gap-2">
             {slides.map((_, index) => (
               <button

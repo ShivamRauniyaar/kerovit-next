@@ -9,7 +9,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import style from "./SecondSectionSlider.module.css";
-import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 

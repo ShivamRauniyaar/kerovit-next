@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import style from "./Newcontact.module.css";
 export default function Newcontact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -18,14 +17,11 @@ export default function Newcontact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    // TODO: Add form submission logic here
   };
 
   return (
     <section>
       <div className=" gap-16 sm:gap-12 ">
-        {/* RIGHT SIDE - FORM */}
         <div className=" w-full ">
           <form onSubmit={handleSubmit} className=" desctext">
             <div className="relative mb-[20px]">
