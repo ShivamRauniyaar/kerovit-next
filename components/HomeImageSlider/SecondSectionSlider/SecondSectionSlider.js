@@ -78,7 +78,12 @@ const SecondSectionSlider = () => {
   return (
     <section className={`${style.sectionpadd} section_padding_px  `}>
       <div className={`${style.swiperpadding}`}>
-        <div className="section_3_header mb-[64px]">
+        <div
+          className="section_3_header mb-[64px] pb-[0]"
+          style={{
+            paddingBottom: 0,
+          }}
+        >
           Discover a world crafted <br /> for the way you live
         </div>
 

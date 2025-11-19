@@ -63,7 +63,7 @@ export default function Home() {
                   <p className="label_discription mt-[8px]">
                     Kerovit Experience Center Bhiwadi
                   </p>
-                  <p className="mt-[16px] text-[14px]">
+                  <p className=" label_discription mt-[16px] text-[14px]">
                     119 Third Floor, Farah Icon, Laal Bagh Main Rd,
                     <br />
                     opp. New Passport Kendra, Bhiwadi,
