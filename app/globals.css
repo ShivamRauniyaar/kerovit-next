@@ -95,7 +95,6 @@ h1 h2 {
   color: var(--color-button-bg);
 }
 
-
 /* ===== Labels ===== */
 .label_heading {
   font-weight: 400;
@@ -147,6 +146,15 @@ h1 h2 {
   display: inline-block;
 }
 
+.section_padding_px {
+  padding-right: 64px;
+  padding-left: 64px;
+}
+
+.section_padding_py {
+  padding-top: 124px;
+  padding-bottom: 124px;
+}
 /* underline animation only under text */
 .button1 .btn-text::after {
   content: "";
@@ -158,10 +166,6 @@ h1 h2 {
   background-color: currentColor;
   transition: width 0.3s ease;
 }
-
-
-
-
 
 /* animate underline */
 .button1:hover .btn-text::after {
@@ -436,6 +440,16 @@ select {
   color: #979795;
   letter-spacing: 1%;
 }
+
+.responsive_mobile_slider_text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 170%;
+  letter-spacing: 2%;
+  color: #ffffff;
+  font-family: var(--font-secondary);
+}
+
 /* .swiper-button-custom:hover {
         background: rgba(255, 255, 255, 1);
         transform: scale(1.1);
@@ -457,5 +471,16 @@ select {
 
   .swiper-nav-container {
     display: flex;
+  }
+
+  .section_padding_px {
+    /* padding: 16px 0px; */
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .section_padding_py {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 }

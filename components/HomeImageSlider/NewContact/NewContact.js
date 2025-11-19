@@ -27,7 +27,7 @@ export default function Newcontact() {
       <div className=" gap-16 sm:gap-12 mt-8 sm:mt-16">
         {/* RIGHT SIDE - FORM */}
         <div className=" w-full ">
-          <form onSubmit={handleSubmit} className=" mt-8 desctext">
+          <form onSubmit={handleSubmit} className="mb-[20px] desctext">
             <div className="relative mb-3">
               <input
                 type="text"
@@ -53,7 +53,7 @@ export default function Newcontact() {
               </label>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 mb-[20px] sm:grid-cols-2 gap-4">
               <div className=" relative">
                 <input
                   type="tel"
@@ -109,7 +109,7 @@ export default function Newcontact() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1  gap-4">
+            <div className="grid grid-cols-1 mb-[20px]  gap-4">
               <div className="relative mb-3">
                 <input
                   type="text"

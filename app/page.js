@@ -12,7 +12,7 @@ export default function Home() {
           <img src="./Group.png" alt="Logo" />
         </div>
       </header>
-      <section className="flex flex-col items-center justify-center text-center py-[64px] md:py-[124px] px-4">
+      <section className="flex flex-col items-center justify-center text-center section_padding_px py-[64px] md:py-[124px] px-4">
         <h1 className="section_1_header">Kerovit Experience Center, Bhiwadi</h1>
         <p className="section_1_description">Open Today: 10:00 AM to 7:00 PM</p>
         <button className="button1 mt-[40px]">
@@ -21,7 +21,7 @@ export default function Home() {
       </section>
 
       <HomeImageslider />
-      <section className="mx-auto py-[124px] px-[64px] flex flex-col md:flex-row justify-between gap-12">
+      <section className="mx-auto py-[124px] section_padding_px flex flex-col md:flex-row justify-between gap-12">
         <div className="md:w-2/3">
           <h2 className="section_3_header">We're Here When You Are</h2>
           <p className="section_3_description">
@@ -111,7 +111,7 @@ export default function Home() {
       </section>
       <SecondSectionSlider />
 
-      <section className="mx-auto pt-[124px] pb-[192px] px-6 md:px-12 flex flex-col md:flex-row items-start gap-12">
+      <section className="mx-auto pt-[124px] pb-[192px] section_padding_px px-6 md:px-12 flex flex-col md:flex-row items-start gap-12">
         <div className="w-full md:w-1/2 space-y-8">
           <div className="md:w-[70%]">
             <h2 className="section_4_heading mb-[32px]">Book a Tour</h2>
@@ -135,7 +135,7 @@ export default function Home() {
         ></div>
       </section>
 
-      <footer className="border-t border-[#E1E6E5] py-[80px] px-[64px] md:px-12">
+      <footer className="border-t border-[#E1E6E5] py-[80px] section_padding_px md:px-12">
         <div className="mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>

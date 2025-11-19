@@ -127,6 +127,8 @@
   animation: progressAnim 5s linear forwards;
 }
 
+
+
 @keyframes progressAnim {
   from {
     stroke-dashoffset: 440;
