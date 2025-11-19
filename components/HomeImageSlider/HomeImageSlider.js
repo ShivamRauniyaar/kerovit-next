@@ -154,11 +154,12 @@ export default function HomeImageslider() {
           modules={[Autoplay, Thumbs, EffectFade]}
           effect="fade"
           loop
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          autoplay={{ delay: 10000, disableOnInteraction: false }}
           thumbs={{ swiper: thumbsSwiper }}
           onSwiper={setMainSwiper}
           className={style.mainswiper}
-          
+          onSlideChange={(value) => setCurrentIndex(value?.activeIndex)}
+          // onSwiper={(swiper) => console.log(swiper)}
         >
           {slides.map((slide) => (
             <div className="relative">
@@ -184,9 +185,10 @@ export default function HomeImageslider() {
           <Swiper
             onSwiper={setThumbsSwiper}
             slidesPerView={4}
-            spaceBetween={20}
+            spaceBetween={16}
             watchSlidesProgress
             className={style.thumbswiper}
+            
           >
             {slides.map((slide) => (
               <SwiperSlide key={slide.id}>
