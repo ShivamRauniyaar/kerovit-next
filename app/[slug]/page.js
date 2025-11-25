@@ -9,7 +9,7 @@ export async function generateStaticParams() {
   const res = await fetch("https://apicms.ecollat.com/api/Kerovit_storess", {
     cache: "no-store",
     headers: {
-      Origin: "	https://kerovitnewstaging.netlify.app",
+      Origin: "https://main.d18ultgzscf471.amplifyapp.com",
     },
   });
 
@@ -33,7 +33,7 @@ export default async function Page({ params }) {
       `https://apicms.ecollat.com/api/Kerovit_storess`,
       {
         cache: "no-store",
-        headers: { Origin: "https://kerovitnewstaging.netlify.app" },
+        headers: { Origin: "https://main.d18ultgzscf471.amplifyapp.com" },
       }
     );
   
